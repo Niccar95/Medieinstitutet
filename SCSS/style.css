@@ -1,0 +1,37 @@
+/* Variables */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: lightblue;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .section {
+  font-weight: 700;
+}
+.main .section .p1 {
+  font-weight: 400;
+  color: green;
+}
+.main .main-section {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.main .main-section p, .main .main-section .test {
+  color: yellow;
+  background-color: aquamarine;
+}
+.main .main-section p:hover, .main .main-section .test:hover {
+  color: red;
+}
+.main .test {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
