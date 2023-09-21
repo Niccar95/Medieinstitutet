@@ -1,0 +1,13 @@
+.body .header1 {
+  color: blue;
+}
+.body .header2 {
+  color: blue;
+}
+.body .p1 ~ .p2 {
+  color: red;
+}
+.body p::first-letter {
+  font-size: 64px;
+  color: red;
+}/*# sourceMappingURL=nesting.css.map */

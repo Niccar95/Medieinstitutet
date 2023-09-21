@@ -33,6 +33,12 @@
     }
   }
 
+  @mixin mobile($mobile) {
+    @media(max-width:$mobile) {
+      @content;
+    }
+  }
+
 
 .main {
   background-color: $secondary-color;

@@ -1,0 +1,20 @@
+.body {
+
+  .header1 {
+    color: blue;
+  }
+
+  .header2 {
+    color: blue;
+  }
+
+  .p1 ~ .p2 {
+    color: red;
+  }
+
+  p::first-letter {
+    font-size: 64px;
+    color: red;
+  }
+
+}
