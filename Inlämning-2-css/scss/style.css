@@ -37,9 +37,10 @@ header nav ul a:hover {
 
 .container {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 15px;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 3fr 2fr;
+  height: 1300px;
   margin-top: 15px;
   color: white;
 }
@@ -50,6 +51,9 @@ header nav ul a:hover {
   grid-column: 1/span 2;
   grid-row: 2/3;
   background-color: blue;
+}
+.container .box1 figure:first-child {
+  padding: 8px 8px 8px 8px;
 }
 .container .box3 {
   grid-row: 2/span 2;
@@ -62,20 +66,25 @@ header nav ul a:hover {
 }
 .container .box4 {
   grid-row-start: 3;
-  width: 120px;
   display: flex;
   justify-content: flex-start;
   background-color: rgb(183, 216, 227);
+  padding: 8px 8px 8px 8px;
 }
 .container .box4 p:first-child {
   writing-mode: vertical-lr;
   text-orientation: mixed;
   font-size: 20px;
-  padding: 8px 8px 8px 8px;
 }
 .container .box5 {
   grid-row-start: 3;
   background-color: purple;
+}
+.container .box5 figure:nth-child(1) {
+  padding: 8px 8px 8px 8px;
+}
+.container .box5 figure:last-child {
+  padding: 8px 8px 8px 8px;
 }
 
 footer {
@@ -87,4 +96,5 @@ footer {
   height: 80px;
   background-color: rgb(90, 2, 149);
   color: white;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
