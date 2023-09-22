@@ -2,8 +2,9 @@
 $darkColor1: purple;
 $darkColor2: rgb(90, 2, 149);
 $darkColor3: blue;
-$lightColor1: rgb(186, 223, 235);
-$lightColor2: whitesmoke;
+$lightColor1: rgb(183, 216, 227);
+$lightColor2: white;
+$lightColor3: yellow;
 
 * {
   margin: 0;
@@ -23,7 +24,7 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 2fr;
 }
 
 
@@ -34,11 +35,8 @@ body {
     justify-content: space-evenly;
 }
 
-@mixin borderStyle {
 
-}
-
-.header-el {
+header {
   height: 70px;
   nav {
     ul {
@@ -46,10 +44,18 @@ body {
       width: 100%;
       height: 70px;
       background-color: $darkColor2;
+      list-style-type: none;
       
       a:link, a:visited {
         text-decoration: none;
         color: $lightColor2;
+        padding: 8px 8px 8px 8px;
+      }
+
+      a:hover {
+        background-color: $lightColor3;
+        color: $darkColor2;
+
       }
     }  
   }
@@ -61,39 +67,44 @@ body {
   color: $lightColor2;
 
   .box2 {
-   border-style: solid;
    grid-column: 1 / span 3;
   }
 
   .box1 {
-  border-style: solid;
   grid-column: 1 / span 2;
   grid-row: 2 / 3;
   background-color: $darkColor3;
   }
     
   .box3 {
-    border-style: solid;
     grid-row: 2 / span 2;
     background-color: $lightColor1;
+    padding: 8px 8px 8px 8px;
+
+    .p1::first-letter {
+      font-size: 3rem;
+      color:yellow; 
+     }
+    
   }
 
   .box4 {
-    border-style: solid;
     grid-row-start: 3;
     width: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: $lightColor1;
 
     p:first-child {
       writing-mode: vertical-lr;
       text-orientation: mixed;
+      font-size: 20px;
+      padding: 8px 8px 8px 8px;
+
     }
   }
 
   .box5 {
-    border-style: solid;
     grid-row-start: 3;
     background-color: $darkColor1;
   }
@@ -103,8 +114,9 @@ footer {
   display: flex; 
   justify-content: flex-end;
   align-items: center;
-  border-style: solid; 
+  padding: 10px 10px 10px 10px;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: $darkColor2;
+  color: $lightColor2;
 }
