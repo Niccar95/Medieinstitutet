@@ -1,26 +1,29 @@
 
 $darkColor1: purple;
-$darkColor2: rgb(85, 0, 85);
+$darkColor2: rgb(90, 2, 149);
 $darkColor3: blue;
-$lightColor: lightblue;
+$lightColor1: rgb(186, 223, 235);
+$lightColor2: whitesmoke;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   min-height: 100vw;
+  max-height: 100vw;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
-
 @mixin mainGrid {
-  margin-top: 100px;
   display: grid;
   grid-gap: 20px;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -43,14 +46,19 @@ body {
       width: 100%;
       height: 70px;
       background-color: $darkColor2;
+      
+      a:link, a:visited {
+        text-decoration: none;
+        color: $lightColor2;
+      }
     }  
   }
 }
   
-
 .container {
   @include mainGrid;
   margin-top: 15px;
+  color: $lightColor2;
 
   .box2 {
    border-style: solid;
@@ -61,23 +69,24 @@ body {
   border-style: solid;
   grid-column: 1 / span 2;
   grid-row: 2 / 3;
+  background-color: $darkColor3;
   }
     
   .box3 {
     border-style: solid;
-    grid-row: 2 / span 4;
-    height: 700px;
+    grid-row: 2 / span 2;
+    background-color: $lightColor1;
   }
 
   .box4 {
     border-style: solid;
-    grid-row: 3 / span 4;
+    grid-row-start: 3;
     width: 120px;
-    height: 1000px;
     display: flex;
     justify-content: center;
+    background-color: $lightColor1;
 
-    p {
+    p:first-child {
       writing-mode: vertical-lr;
       text-orientation: mixed;
     }
@@ -85,9 +94,8 @@ body {
 
   .box5 {
     border-style: solid;
-    grid-row: 3 / 4; 
-    width: 700px;
-
+    grid-row-start: 3;
+    background-color: $darkColor1;
   }
 }
 
@@ -98,4 +106,5 @@ footer {
   border-style: solid; 
   width: 100%;
   height: 100px;
+  background-color: $darkColor2;
 }
