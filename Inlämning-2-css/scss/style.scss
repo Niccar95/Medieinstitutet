@@ -9,15 +9,25 @@ $lightColor3: yellow;
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; 
 }
 
 body {
-  min-height: 100vw;
-  max-height: 100vw;
   margin-left: 25%;
   margin-right: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 500px;
+  }
 }
 
 @mixin mainGrid {
@@ -28,14 +38,12 @@ body {
   height: 1300px;
 }
 
-
 @mixin headerFlex {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
-
 
 header {
   height: 70px;
@@ -51,12 +59,12 @@ header {
         text-decoration: none;
         color: $lightColor2;
         padding: 8px 8px 8px 8px;
+        font-size: 16px;
       }
 
       a:hover {
         background-color: $lightColor3;
         color: $darkColor2;
-
       }
     }  
   }
