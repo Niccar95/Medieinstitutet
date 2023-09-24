@@ -16,19 +16,8 @@ body {
   margin: auto;
   max-width: 120vw;
   max-width: 80vh;
+  
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@media (max-width: 600px) {
-  body {
-    width: 500px;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    width: 500px;
-  }
 }
 
 @mixin mainGrid {
@@ -129,10 +118,10 @@ header {
   .box:nth-child(5) {
     grid-row-start: 3;
     background-color: $darkColor1;
-   
 
     figure:nth-child(1) {
       @include figure-padding-fontSize;
+        
     }
 
     figure:last-child {
@@ -152,5 +141,23 @@ footer {
   color: $lightColor2;
   bottom: 0;
   position: relative; /* Denna footer är relativ till .container*/
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    width: 500px;
+  }
 }
                        
