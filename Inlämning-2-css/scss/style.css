@@ -32,7 +32,7 @@ header nav ul a:link, header nav ul a:visited {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 header nav ul a:hover {
-  background-color: blue;
+  background-color: yellow;
   color: rgb(90, 2, 149);
 }
 
