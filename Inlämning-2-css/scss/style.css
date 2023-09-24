@@ -23,24 +23,24 @@ body {
   }
 }
 header {
-  width: 100%;
   height: 70px;
+  width: 100%;
 }
 header nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
   height: 70px;
+  width: 100%;
   background-color: rgb(90, 2, 149);
   list-style-type: none;
 }
 header nav ul a:link, header nav ul a:visited {
   text-decoration: none;
   color: white;
+  font-size: 18px;
   padding: 8px 8px 8px 8px;
-  font-size: 16px;
 }
 header nav ul a:hover {
   background-color: yellow;
@@ -56,48 +56,51 @@ header nav ul a:hover {
   color: white;
   position: relative;
 }
-.container .box2 {
+.container .box:nth-child(2) {
   grid-column: 1/span 3;
 }
-.container .box1 {
+.container .box:nth-child(1) {
   grid-column: 1/span 2;
   grid-row: 2/3;
   background-color: blue;
 }
-.container .box1 figure:first-child {
+.container .box:nth-child(1) figure:first-child {
+  font-size: 18px;
   padding: 8px 8px 8px 8px;
 }
-.container .box3 {
+.container .box:nth-child(3) {
   grid-row: 2/span 2;
   background-color: rgb(183, 216, 227);
   padding: 8px 8px 8px 8px;
   width: 200px;
 }
-.container .box3 .p1::first-letter {
+.container .box:nth-child(3) .p1::first-letter {
   font-size: 3rem;
   color: yellow;
 }
-.container .box4 {
+.container .box:nth-child(4) {
   grid-row-start: 3;
   display: flex;
   justify-content: flex-start;
   background-color: rgb(183, 216, 227);
   padding: 8px 8px 8px 8px;
 }
-.container .box4 p:first-child {
+.container .box:nth-child(4) p:first-child {
   writing-mode: vertical-lr;
   text-orientation: mixed;
   font-size: 20px;
   width: 80px;
 }
-.container .box5 {
+.container .box:nth-child(5) {
   grid-row-start: 3;
   background-color: purple;
 }
-.container .box5 figure:nth-child(1) {
+.container .box:nth-child(5) figure:nth-child(1) {
+  font-size: 18px;
   padding: 8px 8px 8px 8px;
 }
-.container .box5 figure:last-child {
+.container .box:nth-child(5) figure:last-child {
+  font-size: 18px;
   padding: 8px 8px 8px 8px;
 }
 
@@ -105,6 +108,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-size: 18px;
   padding: 8px 8px 8px 8px;
   width: 100%;
   height: 70px;
