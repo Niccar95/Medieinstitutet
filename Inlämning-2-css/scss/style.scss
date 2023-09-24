@@ -1,10 +1,17 @@
+@use 'sass:math';
 
-$darkColor1: purple;
-$darkColor2: rgb(90, 2, 149);
-$darkColor3: blue;
-$lightColor1: rgb(183, 216, 227);
-$lightColor2: white;
-$lightColor3: yellow;
+@function pxTorem($pixel) {
+  @return math.div($pixel, 16)+rem;
+}
+
+$colors: (
+"darkColor1": purple,
+"darkColor2": rgb(90, 2, 149),
+"darkColor3": blue,
+"lightColor1": rgb(183, 216, 227),
+"lightColor2": white,
+"lightColor3": yellow,
+);
 
 * {
   margin: 0;
@@ -16,13 +23,12 @@ body {
   margin: auto;
   max-width: 120vw;
   max-width: 80vh;
-  
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @mixin mainGrid {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: pxTorem(15);
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto;
 }
@@ -35,12 +41,12 @@ body {
 }
 
 @mixin figure-padding-fontSize {
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: pxTorem(18);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 @mixin head-foot-width {
-  height: 70px;
+  height: pxTorem(70);
   width: 100%;
 }
 
@@ -50,18 +56,18 @@ header {
     ul {
       @include headerFlex; 
       @include head-foot-width;
-      background-color: $darkColor2;
+      background-color: map-get($colors, "darkColor2");
       list-style-type: none;
       
       a:link, a:visited {
         text-decoration: none;
-        color: $lightColor2;
+        color: map-get($colors, "lightColor2");
         @include figure-padding-fontSize;
       }
 
       a:hover {
-        background-color: $lightColor3;
-        color: $darkColor2;
+        background-color: map-get($colors, "darkColor3");
+        color: map-get($colors, "darkColor2");
       }
     }  
   }
@@ -69,9 +75,8 @@ header {
   
 .container {
   @include mainGrid;
-  margin-top: 10px;
-  color: $lightColor2;
-  position: relative;
+  margin-top: pxTorem(10);
+  color: map-get($colors, "lightColor2");
 
   .box:nth-child(2) {
    grid-column: 1 / span 3;
@@ -80,7 +85,7 @@ header {
   .box:nth-child(1) {
    grid-column: 1 / span 2;
    grid-row: 2 / 3;
-   background-color: $darkColor3;
+   background-color: map-get($colors, "darkColor3");
 
   figure:first-child {
     @include figure-padding-fontSize;
@@ -89,35 +94,34 @@ header {
     
   .box:nth-child(3) {
     grid-row: 2 / span 2;
-    background-color: $lightColor1;
-    padding: 8px 8px 8px 8px;
-    width: 200px;
+    background-color: map-get($colors, "lightColor1");
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: pxTorem(200);
 
     .p1::first-letter {
-      font-size: 3rem;
-      color:yellow; 
-     }
-    
+      font-size: pxTorem(48);
+      color: map-get($colors, "lightColor3"); 
+     } 
   }
 
   .box:nth-child(4) {
     grid-row-start: 3;
     display: flex;
     justify-content: flex-start;
-    background-color: $lightColor1;
-    padding: 8px 8px 8px 8px;
+    background-color: map-get($colors, "lightColor1");
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
     p:first-child {
       writing-mode: vertical-lr;
       text-orientation: mixed;
-      font-size: 20px; 
-      width: 80px;
+      font-size: pxTorem(20); 
+      width: pxTorem(80);
     }
   }
 
   .box:nth-child(5) {
     grid-row-start: 3;
-    background-color: $darkColor1;
+    background-color: map-get($colors, "darkColor1");
 
     figure:nth-child(1) {
       @include figure-padding-fontSize;
@@ -135,29 +139,26 @@ footer {
   justify-content: flex-end;
   align-items: center;
   @include figure-padding-fontSize;
-  width: 100%;
-  height: 70px;
-  background-color: $darkColor2;
-  color: $lightColor2;
-  bottom: 0;
-  position: relative; /* Denna footer är relativ till .container*/
+  @include head-foot-width;
+  background-color: map-get($colors, "darkColor2");
+  color: map-get($colors, "lightColor2");
 }
 
 @media (max-width: 600px) {
   .container {
-    width: 500px;
+    width: pxTorem(500);
   }
 }
 
 @media (max-width: 600px) {
   header {
-    width: 500px;
+    width: pxTorem(500);
   }
 }
 
 @media (max-width: 600px) {
   footer {
-    width: 500px;
+    width: pxTorem(500);
   }
 }
                        

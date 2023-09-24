@@ -15,15 +15,11 @@
     @return white;
   }
 
-  @function fontSize($color) {
-     @ if
-  }
- 
 }
 
 body {
   font-weight: 700-200;
-  width: math.div(85.2, 12.6);
+  width: math.div(8, 2);
   font-size: pxToem(30);
   color: body-theme(neutral);
 }

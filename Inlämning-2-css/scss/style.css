@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ body {
 }
 
 header {
-  height: 70px;
+  height: 4.375rem;
   width: 100%;
 }
 header nav ul {
@@ -21,7 +20,7 @@ header nav ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 70px;
+  height: 4.375rem;
   width: 100%;
   background-color: rgb(90, 2, 149);
   list-style-type: none;
@@ -29,22 +28,21 @@ header nav ul {
 header nav ul a:link, header nav ul a:visited {
   text-decoration: none;
   color: white;
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 header nav ul a:hover {
-  background-color: yellow;
+  background-color: blue;
   color: rgb(90, 2, 149);
 }
 
 .container {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 0.9375rem;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   color: white;
-  position: relative;
 }
 .container .box:nth-child(2) {
   grid-column: 1/span 3;
@@ -55,14 +53,14 @@ header nav ul a:hover {
   background-color: blue;
 }
 .container .box:nth-child(1) figure:first-child {
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .container .box:nth-child(3) {
   grid-row: 2/span 2;
   background-color: rgb(183, 216, 227);
-  padding: 8px 8px 8px 8px;
-  width: 200px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 12.5rem;
 }
 .container .box:nth-child(3) .p1::first-letter {
   font-size: 3rem;
@@ -73,53 +71,51 @@ header nav ul a:hover {
   display: flex;
   justify-content: flex-start;
   background-color: rgb(183, 216, 227);
-  padding: 8px 8px 8px 8px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .container .box:nth-child(4) p:first-child {
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  font-size: 20px;
-  width: 80px;
+  font-size: 1.25rem;
+  width: 5rem;
 }
 .container .box:nth-child(5) {
   grid-row-start: 3;
   background-color: purple;
 }
 .container .box:nth-child(5) figure:nth-child(1) {
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .container .box:nth-child(5) figure:last-child {
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 18px;
-  padding: 8px 8px 8px 8px;
+  font-size: 1.125rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  height: 4.375rem;
   width: 100%;
-  height: 70px;
   background-color: rgb(90, 2, 149);
   color: white;
-  bottom: 0;
-  position: relative; /* Denna footer är relativ till .container*/
 }
 
 @media (max-width: 600px) {
   .container {
-    width: 500px;
+    width: 31.25rem;
   }
 }
 @media (max-width: 600px) {
   header {
-    width: 500px;
+    width: 31.25rem;
   }
 }
 @media (max-width: 600px) {
   footer {
-    width: 500px;
+    width: 31.25rem;
   }
 }/*# sourceMappingURL=style.css.map */
