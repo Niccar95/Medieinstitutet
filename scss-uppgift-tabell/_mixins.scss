@@ -1,0 +1,11 @@
+@mixin fontContainer {
+  border-style: solid;
+  border-color: black;
+  border-width: 1em;
+  box-shadow: 3px 3px 3px yellow;
+  width: 400px;
+  padding: 2em 2em 2em 2em;
+  font-size: 2em;
+}
+
+

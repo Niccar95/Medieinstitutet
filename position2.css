@@ -1,0 +1,129 @@
+body {
+  height: 100vh;
+}
+
+.outer-container {
+  height: 90vh;
+  width: 90vw;
+  border-style: dashed;
+  border-width: 0.5rem;
+  margin-top: 50px;
+  position: relative;
+  margin: auto; 
+}
+
+.inner-container {
+  height: 60vh;
+  width: 60vw;
+  border-style: solid;
+  border-color: blue;
+  border-width: 0.5rem;
+  margin-top: 100px;
+  margin-left: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .absolute {
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+}
+
+
+.relative {
+  background-color: red;
+  position: relative;
+  top: 0;
+}
+
+.boll {
+  margin-top: 50px;
+  margin-left: 500px;
+  height: 50px;
+  background-color: blue;
+  width: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-style: solid;
+  transition-duration: 1s;
+  animation: move 2s infinite;
+  position: relative;
+  border-radius: 50%;
+}
+
+
+@keyframes move {
+  0% {top: 0px;}
+  50% {top: 250px; transform: scale(2); background-color: yellow; width: 200px; opacity: 0.5;} 
+  100% {top: 0px; background-color: red;}
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+
+  /* to{scale: 1.2}; enklare sätt att skriva utan repetition */
+}
+
+
+.heart {
+  margin-left: 200px;
+  margin-top: 100px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(45deg);
+  animation: heart 1.5s infinite;
+}
+
+
+.heart::before, .heart::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.heart::before {
+  left: -50px; 
+}
+
+.heart::after {
+  top: -50px;
+}
