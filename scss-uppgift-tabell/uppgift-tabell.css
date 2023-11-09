@@ -4,6 +4,14 @@
 body {
   background-image: linear-gradient(to top, blue, black, red, yellow, green);
   color: white;
+  counter-reset: mult 0;
+}
+
+table, th, td {
+  border: solid black 1px;
+  width: 80px;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .font1 {
