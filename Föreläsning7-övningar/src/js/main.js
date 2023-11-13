@@ -42,10 +42,14 @@ window.onload = function (){
 }
 
 
-*/
+*/ 
 
 
 
+//Extra uppgift
+
+
+/*
 const itemList = ["Juice", "Apple", "Eggs"];
 const mainContainer = document.createElement("div");
 
@@ -78,6 +82,22 @@ section.innerHTML += " " + products;
 })
   
   })
+
+  */
+
+
+  class Foods {
+    appetizer;
+    mainDish;
+    dessert;
+
+    constructor(){
+      this.appetizer = appetizer;
+      this.mainCourse = mainCourse;
+      this.dessert = dessert;
+    }
+
+  }
   
 
 
