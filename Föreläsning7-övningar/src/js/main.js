@@ -1,4 +1,5 @@
 import './../scss/style.css'
+import { MenuFoods } from './models/menuFoods';
 
 
 /* class Person {
@@ -86,18 +87,21 @@ section.innerHTML += " " + products;
   */
 
 
-  class Foods {
-    appetizer;
-    mainDish;
-    dessert;
+  const menuItems = new MenuFoods("Prosciutto", "Meatballs", "Cake");
 
-    constructor(){
-      this.appetizer = appetizer;
-      this.mainCourse = mainCourse;
-      this.dessert = dessert;
-    }
+  console.log(menuItems);
 
-  }
+  const menu = document.createElement("ul");
+  const menuList = document.createElement("li");
+  document.body.appendChild(menu);
+  menu.appendChild(menuList);
+
+
+
+
+
+
+
   
 
 
