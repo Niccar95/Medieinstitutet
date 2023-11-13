@@ -118,7 +118,7 @@ removeButton.disabled = true;
 });
 
 
-//Roll the dice game
+/* Roll the dice game
 
 
 const rollDiceButton = document.createElement("button");
@@ -144,6 +144,8 @@ rollDiceButton.addEventListener("Click", () => {
   outputNumber.innerHTML = "he;"
 
 })
+
+*/
 
 
 
