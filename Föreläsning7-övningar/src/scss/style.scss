@@ -30,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: linear-gradient(red, white, yellow);
 }
 
 h1 {
@@ -38,6 +39,8 @@ h1 {
 }
 
 #app {
+  flex-direction: row;
+  gap: 2em;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -96,3 +99,29 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+.mainContainer {
+  border: solid white;
+  padding: 2em;
+  display: flex; 
+  flex-direction: row;
+  gap: 2em;
+  border-radius: 1em;
+
+  .itemContainer {
+    border: solid white;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 1em;
+  }
+
+  .itemContainer:hover {
+    background-color: grey;
+  }
+}
+
+
+
+

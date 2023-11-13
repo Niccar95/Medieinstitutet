@@ -1,8 +1,7 @@
 import './../scss/style.css'
 
 
-
-class Person {
+/* class Person {
   firstName;
   lastName;
   age;
@@ -41,4 +40,50 @@ window.onload = function (){
 }
 
 }
+
+
+*/
+
+
+
+const itemList = ["Juice", "Apple", "Eggs"];
+const mainContainer = document.createElement("div");
+
+const section = document.createElement("section");
+document.body.appendChild(section);
+
+
+
+itemList.forEach((products) => {
+
+
+const itemContainer = document.createElement("div");
+
+document.body.appendChild(mainContainer);
+mainContainer.appendChild(itemContainer);
+
+mainContainer.className = "mainContainer";
+
+const items = document.createElement("h2");
+itemContainer.appendChild(items);
+itemContainer.className = "itemContainer";
+
+items.innerHTML = products;
+
+
+
+itemContainer.addEventListener("click", () => {
+section.innerHTML += " " + products;
+
+})
+  
+  })
+  
+
+
+
+
+
+
+
 
