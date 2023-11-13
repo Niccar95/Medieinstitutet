@@ -27,6 +27,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -95,3 +96,71 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  .itemContainer {
+    border: solid 0.5em; 
+    transition: background-image, border-color, linear 0.2s;
+    padding: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1em;
+
+    &.itemContainer:hover {
+      color: yellowgreen;
+      border-color: yellowgreen;
+    }
+  
+    &.chipsImage {
+      background-image: url('/src/img/chips.jpg');
+     
+    }
+  
+    &.sodaImage {
+      background-image: url('/src/img/soda.jpg');
+     
+    }
+  
+    &.candyImage {
+      background-image: url('/src/img/candy.jpg');
+     
+    }
+  
+    &.milkImage {
+      background-image: url('/src/img/milk.jpg');
+   
+    }
+  
+    &.tomatoesImage {
+      background-image: url('/src/img/tomatoes.jpg');
+   
+    }
+
+    .addButton {
+      margin-right: 0.2em;
+      border: solid whitesmoke;
+    }
+
+    .addButton:hover, .removeButton:hover {
+      opacity: 0.8;
+    }
+
+    .removeButton {
+      border: solid whitesmoke;
+      margin-left: 0.2em;
+    }
+
+  }
+
+  
+}
+
+
+
+
+

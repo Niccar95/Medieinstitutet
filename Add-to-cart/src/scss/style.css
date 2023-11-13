@@ -26,6 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -97,4 +98,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.mainContainer .itemContainer {
+  border: solid 0.5em;
+  cursor: pointer;
+  transition: background-image, border-color, linear 0.2s;
+  padding: 2em;
+  background-image: url(/src/img/tomatoes.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1em;
+}
+.mainContainer .itemContainer:hover {
+  background-image: linear-gradient(black, grey, black);
+  border-color: yellowgreen;
+}
+.mainContainer .itemContainer:active {
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
