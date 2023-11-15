@@ -88,13 +88,81 @@ section.innerHTML += " " + products;
 
 
   const menuItems = new MenuFoods("Prosciutto", "Meatballs", "Cake");
+  const menuItems2 = new MenuFoods("Shrimp", "Lamb", "Sorbet");
+
+  
 
   console.log(menuItems);
 
-  const menu = document.createElement("ul");
-  const menuList = document.createElement("li");
-  document.body.appendChild(menu);
-  menu.appendChild(menuList);
+  const menuContainer = document.createElement("section");
+  document.body.appendChild(menuContainer);
+
+  const listOfItems = [menuItems, menuItems2];
+
+  for (let i = 0; i < listOfItems.length; i++) {
+    const menu = document.createElement("ul");
+    const menuList = document.createElement("li");
+    
+    menuContainer.appendChild(menu);
+    menu.appendChild(menuList);
+
+    const menu2 = document.createElement("ul");
+    const menuList2 = document.createElement("li");
+    menuList.appendChild(menu2);
+    menu2.appendChild(menuList2);
+
+    menuList.innerHTML = "Appetizers: " + listOfItems[i].appetizer;
+    menuList2.innerHTML = "Main dishes: " + listOfItems[i].mainDish;
+
+  }
+
+
+  const menuContainer = document.createElement("div");
+document.body.appendChild(menuContainer);
+
+const menu = document.createElement("ul");
+menuContainer.appendChild(menu);
+
+const menuList1 = document.createElement("li");
+menuList1.textContent = "Category 1";
+menu.appendChild(menuList1);
+
+const menuList2 = document.createElement("ul");
+menuList1.appendChild(menuList2);
+
+const subMenuItem1 = document.createElement("li");
+subMenuItem1.textContent = "Subcategory 1.1";
+menuList2.appendChild(subMenuItem1);
+
+const subMenuItem2 = document.createElement("li");
+subMenuItem2.textContent = "Subcategory 1.2";
+menuList2.appendChild(subMenuItem2);
+
+const menuList3 = document.createElement("li");
+menuList3.textContent = "Category 2";
+menu.appendChild(menuList3);
+
+const menuList4 = document.createElement("ul");
+menuList3.appendChild(menuList4);
+
+const subMenuItem3 = document.createElement("li");
+subMenuItem3.textContent = "Subcategory 2.1";
+menuList4.appendChild(subMenuItem3);
+
+const subMenuItem4 = document.createElement("li");
+subMenuItem4.textContent = "Subcategory 2.2";
+menuList4.appendChild(subMenuItem4);
+
+    
+
+
+
+
+
+
+  
+  
+  
 
 
 
