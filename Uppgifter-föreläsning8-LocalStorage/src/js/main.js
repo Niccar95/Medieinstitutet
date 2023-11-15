@@ -38,6 +38,13 @@ personList.forEach((P, i) => {
   list.innerHTML = P.firstName;
   list2.innerHTML = P.lastName;
 
+  removeButton.addEventListener("click", () => {
+    personList.splice(i, 1);
+    list.innerHTML = " ";
+    
+  });
+
+
   
 
 });
