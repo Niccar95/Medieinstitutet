@@ -43,11 +43,15 @@ personList.forEach((P, i) => {
     list.innerHTML = " ";
     
   });
-
-
-  
-
 });
+
+
+
+
+
+
+
+
 
 
 

@@ -10,7 +10,7 @@ function myButton() {
 
 myButton = (e) => {
   console.log(e.target); 
-  e.target.clasName = "red";
+  e.target.className = "red";
   } 
 
  clickMe.addEventListener("click", () => {
