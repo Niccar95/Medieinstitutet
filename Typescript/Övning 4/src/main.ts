@@ -1,25 +1,30 @@
-import '../scss/style.scss'
 import { Person } from './models';
+import './style.css'
+
 
 localStorage.setItem("Name", "Nicolas");
 
 const myName = localStorage.getItem("Name");
 
 const nameTag = document.createElement("p");
-const container = document.getElementById("app");
+const container = document.getElementById("app") as HTMLDivElement;
 container.appendChild(nameTag);
 
-nameTag.innerHTML = myName;
+if(myName !== null) {
 
-const person = new Person("Vilma", "Mannermaa", "28");
-const person2 = new Person("Antonia", "Carrasco", "14");
+  nameTag.innerHTML = myName;
 
-let personList = [person, person2];
+}
+
+const person: Person = new Person("Vilma", "Mannermaa", 28);
+const person2: Person = new Person("Antonia", "Carrasco", 14);
+
+let personList: Person[] = [person, person2];
 
 localStorage.setItem("PersonInfo", JSON.stringify(personList));
 
- personList = JSON.parse(localStorage.getItem("PersonInfo"));
-
+  personList = JSON.parse(localStorage.getItem("PersonInfo") || "[]");
+ 
  const removeButton = document.createElement("button");
   container.appendChild(removeButton);
   removeButton.innerHTML = "Remove from list";
@@ -44,11 +49,6 @@ personList.forEach((P, i) => {
     
   });
 });
-
-
-
-
-
 
 
 
