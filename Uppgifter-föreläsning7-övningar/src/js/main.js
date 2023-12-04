@@ -1,8 +1,8 @@
-import './../scss/style.css'
+import '../scss/style.css'
 import { MenuFoods } from './models/menuFoods';
 
 
-/* class Person {
+  class Person {
   firstName;
   lastName;
   age;
@@ -43,7 +43,7 @@ window.onload = function (){
 }
 
 
-*/ 
+
 
 
 
@@ -87,7 +87,7 @@ section.innerHTML += " " + products;
   */
 
 
-  const menuItems = new MenuFoods("Prosciutto", "Meatballs", "Cake");
+  /* const menuItems = new MenuFoods("Prosciutto", "Meatballs", "Cake");
   const menuItems2 = new MenuFoods("Shrimp", "Lamb", "Sorbet");
 
   
@@ -115,6 +115,8 @@ section.innerHTML += " " + products;
     menuList2.innerHTML = "Main dishes: " + listOfItems[i].mainDish;
 
   }
+
+  */
 
 
   const menuContainer = document.createElement("div");
@@ -152,6 +154,7 @@ menuList4.appendChild(subMenuItem3);
 const subMenuItem4 = document.createElement("li");
 subMenuItem4.textContent = "Subcategory 2.2";
 menuList4.appendChild(subMenuItem4);
+
 
     
 
